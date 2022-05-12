@@ -5,7 +5,7 @@ Run as:
     python3 scripts/validata_data.py data
 """
 
-import os
+import op as op
 import sys
 import hashlib
 
@@ -48,11 +48,11 @@ def validate_data(data_directory):
         ``data_hashes.txt`` file.
     """
     # Read lines from ``data_hashes.txt`` file.
-    for line in open(os.path.join(data_directory, 'data_hashes.txt'), 'rt'):
+    for line in open(op.join(data_directory, 'data_hashes.txt'), 'rt'):
         # Split into SHA1 hash and filename
         hash, filename = line.strip().split()
         # Calculate actual hash for given filename.
-        actual_hash = file_hash(os.path.join(data_directory, filename))
+        actual_hash = file_hash(op.join(data_directory, filename))
         # If hash for filename is not the same as the one in the file, raise
         # ValueError
         if hash != actual_hash:
