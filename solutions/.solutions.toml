@@ -1,0 +1,4 @@
+# Where the exercises etc go, given the solutions
+
+[solution.validate_data]
+out_path = '{one_down}/scripts/validate_data.py'

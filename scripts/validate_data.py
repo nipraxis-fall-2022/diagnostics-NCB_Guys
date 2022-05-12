@@ -5,10 +5,9 @@ Run as:
     python3 scripts/validata_data.py data
 """
 
-import os.path as op
+import op as op
 import sys
 import hashlib
-
 
 def file_hash(filename):
     """ Get byte contents of file `filename`, return SHA1 hash
@@ -25,11 +24,13 @@ def file_hash(filename):
     """
     # Open the file, read contents as bytes.
     # Calculate, return SHA1 has on the bytes from the file.
-    raise NotImplementedError('This is just a template -- you are expected to code this.')
+    # This is a placeholder, replace it to write your solution.
+    raise NotImplementedError(
+        'This is just a template -- you are expected to code this.')
 
 
 def validate_data(data_directory):
-    """ Read ``data_hashes.txt`` file in ``data_directory``, check hashes
+    """ Read ``data_hashes.txt`` file in `data_directory`, check hashes
 
     Parameters
     ----------
@@ -51,6 +52,7 @@ def validate_data(data_directory):
     # Calculate actual hash for given filename.
     # If hash for filename is not the same as the one in the file, raise
     # ValueError
+    # This is a placeholder, replace it to write your solution.
     raise NotImplementedError('This is just a template -- you are expected to code this.')
 
 
