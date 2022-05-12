@@ -5,7 +5,7 @@ Run as:
     python3 scripts/validata_data.py data
 """
 
-import os
+import os.path as op
 import sys
 import hashlib
 
@@ -29,15 +29,12 @@ def file_hash(filename):
 
 
 def validate_data(data_directory):
-    """ Read ``hash_list.txt`` file in ``data_directory``, check hashes
-    
-    An example file ``data_hashes.txt`` is found in the baseline version
-    of the repository template for your reference.
+    """ Read ``data_hashes.txt`` file in ``data_directory``, check hashes
 
     Parameters
     ----------
     data_directory : str
-        Directory containing data and ``hash_list.txt`` file.
+        Directory containing data and ``data_hashes.txt`` file.
 
     Returns
     -------
@@ -47,9 +44,9 @@ def validate_data(data_directory):
     ------
     ValueError:
         If hash value for any file is different from hash value recorded in
-        ``hash_list.txt`` file.
+        ``data_hashes.txt`` file.
     """
-    # Read lines from ``hash_list.txt`` file.
+    # Read lines from ``data_hashes.txt`` file.
     # Split into SHA1 hash and filename
     # Calculate actual hash for given filename.
     # If hash for filename is not the same as the one in the file, raise
