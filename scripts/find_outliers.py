@@ -5,14 +5,14 @@ Run as:
     python3 scripts/find_outliers.py data
 """
 
-import os.path as op
+from pathlib import Path
 import sys
 
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 
 # Put the findoutlie directory on the Python path.
-PACKAGE_DIR = op.join(op.dirname(__file__), '..')
-sys.path.append(PACKAGE_DIR)
+PACKAGE_DIR = Path(__file__).parent / '..'
+sys.path.append(str(PACKAGE_DIR))
 
 from findoutlie import outfind
 

@@ -5,7 +5,7 @@ Run as:
     python3 scripts/validata_data.py data
 """
 
-import op as op
+from pathlib import Path
 import sys
 import hashlib
 

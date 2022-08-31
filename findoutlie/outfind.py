@@ -1,8 +1,7 @@
 """ Module with routines for finding outliers
 """
 
-import os.path as op
-from glob import glob
+from pathlib import Path
 
 
 def detect_outliers(fname):
@@ -23,8 +22,7 @@ def find_outliers(data_directory):
         Dictionary with keys being filenames and values being lists of outliers
         for filename.
     """
-    image_fnames = glob(op.join(data_directory, '**', 'sub-*.nii.gz'),
-                        recursive=True)
+    image_fnames = Path(data_directory).glob('**/sub-*.nii.gz')
     outlier_dict = {}
     for fname in image_fnames:
         outliers = detect_outliers(fname)
