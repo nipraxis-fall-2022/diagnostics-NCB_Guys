@@ -14,6 +14,18 @@ This README file has instructions on how to get, validate and process the data.
 cd data
 curl -L https://figshare.com/ndownloader/files/{DATA_ID} -o group_data.tar
 tar xvf group_data.tar
+```
+
+Add the hash_list file to Git:
+
+```
+git add data/group-*/hash_list.txt
+git commit -m "Add hash list file"
+```
+
+Change directory back to root of repository
+
+```
 cd ..
 ```
 
